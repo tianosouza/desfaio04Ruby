@@ -1,12 +1,8 @@
 require "cpf_cnpj"
 
 def collect_cpf 
-  puts "Digite seu CPF: "
+    puts "Digite seu CPF: "
   cpf = gets.chomp
-  if CPF.valid?(cpf)
-    puts "CPF #{cpf} é válido!"
-  else
-    puts "CPF #{cpf} é inválido!"
-  end
+  puts "CPF #{cpf} é #{CPF.valid?(cpf) ? '' : 'in'}válido!"
 end
 collect_cpf   
